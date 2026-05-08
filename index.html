@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>M.NOSTRA</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Michroma&family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+@font-face{
+    font-family:'Ethnocentric';
+    src:url('https://fonts.cdnfonts.com/s/16082/ethnocentric rg.woff') format('woff');
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:
+    radial-gradient(circle at top,#081425 0%,#020611 45%,#010309 100%);
+    
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    color:white;
+
+    font-family:'Orbitron',sans-serif;
+
+    position:relative;
+}
+
+/* STAR BACKGROUND */
+body::before{
+    content:"";
+
+    position:fixed;
+    inset:0;
+
+    background-image:
+    radial-gradient(rgba(255,255,255,.18) 1px, transparent 1px);
+
+    background-size:38px 38px;
+
+    opacity:.13;
+
+    pointer-events:none;
+}
+
+/* CONTAINER */
+.container{
+    width:100%;
+    max-width:430px;
+
+    margin:auto;
+
+    padding:28px 18px 50px;
+}
+
+/* TOP CARD */
+.top-card{
+    width:100%;
+    height:250px;
+
+    border-radius:34px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        145deg,
+        #07111f,
+        #02060d
+    );
+
+    border:1px solid rgba(0,255,255,.08);
+
+    box-shadow:
+    0 0 35px rgba(0,170,255,.08),
+    inset 0 0 40px rgba(255,255,255,.03);
+}
+
+/* ANIMATION */
+.top-card::before{
+    content:"";
+
+    position:absolute;
+
+    width:220%;
+    height:220%;
+
+    background:
+    linear-gradient(
+        120deg,
+        transparent,
+        rgba(0,255,255,.06),
+        transparent
+    );
+
+    animation:spin 8s linear infinite;
+}
+
+@keyframes spin{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+/* CENTER */
+.center{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+/* LOGO */
+.logo{
+    width:95px;
+    height:95px;
+
+    border:5px solid #e8edf7;
+
+    border-radius:24px;
+
+    transform:rotate(45deg);
+
+    position:relative;
+
+    margin-bottom:34px;
+
+    box-shadow:
+    0 0 14px rgba(255,255,255,.14);
+}
+
+.logo::before{
+    content:"";
+
+    position:absolute;
+
+    inset:14px;
+
+    border:4px solid #e8edf7;
+
+    border-radius:16px;
+}
+
+/* MAIN TOP TITLE */
+.big-title{
+    font-family:'Ethnocentric',sans-serif;
+
+    font-size:54px;
+
+    color:#f7fbff;
+
+    letter-spacing:2px;
+
+    text-shadow:
+    0 0 7px rgba(255,255,255,.7),
+    0 0 20px rgba(255,255,255,.25),
+    0 0 35px rgba(0,255,255,.18);
+}
+
+/* SECOND TITLE */
+.main-title{
+    text-align:center;
+
+    margin-top:48px;
+
+    font-family:'Ethnocentric',sans-serif;
+
+    font-size:56px;
+
+    letter-spacing:7px;
+
+    color:#ffffff;
+
+    text-shadow:
+    0 0 8px rgba(255,255,255,.4),
+    0 0 18px rgba(0,255,255,.15);
+}
+
+/* SUB TITLE */
+.sub{
+    text-align:center;
+
+    margin-top:18px;
+
+    color:#00ffe1;
+
+    font-size:12px;
+
+    letter-spacing:11px;
+
+    font-family:'Michroma',sans-serif;
+
+    text-shadow:
+    0 0 10px rgba(0,255,225,.45);
+}
+
+<!-- GANTI BAGIAN CARD LAMA DENGAN INI -->
+
+<div class="card">
+
+    <div class="card-glow"></div>
+
+    <div class="icon-box">
+
+        <svg viewBox="0 0 24 24">
+            <path d="M12 3L5 6v5c0 5 3.5 8 7 10 3.5-2 7-5 7-10V6l-7-3z"/>
+        </svg>
+
+    </div>
+
+    <h2>M.NOSTRA</h2>
+
+    <p>
+        Aplikasi dengan desain elegan dan fitur modern.<br>
+        Pengembangan langsung oleh TEAM NOSTRA.
+    </p>
+
+</div>
+
+<style>
+
+/* =========================
+   PERFECT OTAX CARD
+========================= */
+
+.card{
+    width:100%;
+
+    margin-top:38px;
+
+    padding:38px 24px 34px;
+
+    border-radius:30px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(10,18,30,.98),
+        rgba(6,12,22,.98)
+    );
+
+    border:1px solid rgba(255,255,255,.03);
+
+    box-shadow:
+    inset 0 0 24px rgba(255,255,255,.02),
+    0 10px 30px rgba(0,0,0,.35);
+}
+
+/* GLOW */
+.card-glow{
+    position:absolute;
+
+    top:-120%;
+    left:-35%;
+
+    width:70%;
+    height:320%;
+
+    transform:rotate(18deg);
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(0,255,225,.04),
+        transparent
+    );
+
+    animation:cardMove 5s linear infinite;
+}
+
+@keyframes cardMove{
+    from{
+        left:-60%;
+    }
+    to{
+        left:130%;
+    }
+}
+
+/* ICON */
+.icon-box{
+    width:76px;
+    height:76px;
+
+    margin:auto;
+
+    border-radius:22px;
+
+    border:2px solid rgba(0,255,225,.32);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(0,15,25,.95),
+        rgba(0,20,30,.95)
+    );
+
+    box-shadow:
+    0 0 18px rgba(0,255,225,.10),
+    inset 0 0 12px rgba(0,255,225,.02);
+}
+
+.icon-box svg{
+    width:30px;
+
+    fill:none;
+
+    stroke:#00ffe1;
+
+    stroke-width:2;
+}
+
+/* TITLE */
+.card h2{
+    margin-top:26px;
+
+    text-align:center;
+
+    font-family:'Ethnocentric',sans-serif;
+
+    font-size:30px;
+
+    letter-spacing:2px;
+
+    color:#ffffff;
+
+    text-shadow:
+    0 0 8px rgba(255,255,255,.25),
+    0 0 16px rgba(0,255,255,.08);
+}
+
+/* DESC */
+.card p{
+    margin-top:22px;
+
+    text-align:center;
+
+    color:#98a5ba;
+
+    font-size:12px;
+
+    line-height:2.1;
+
+    letter-spacing:.3px;
+
+    font-family:'Orbitron',sans-serif;
+}
+
+/* TEXT */
+.card p{
+    margin-top:28px;
+
+    color:#9aa5b8;
+
+    font-size:13px;
+
+    line-height:2.2;
+
+    letter-spacing:.2px;
+
+    font-family:'Orbitron',sans-serif;
+}
+
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.btn{
+    width:100%;
+    height:74px;
+
+    margin-top:30px;
+
+    border:none;
+    border-radius:18px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(0,12,20,.98),
+        rgba(0,18,30,.98)
+    );
+
+    border:2px solid rgba(0,255,225,.35);
+
+    box-shadow:
+    0 0 18px rgba(0,255,225,.12),
+    0 0 40px rgba(0,255,225,.06),
+    inset 0 0 20px rgba(0,255,225,.03);
+
+    transition:.35s ease;
+}
+
+/* TOP RECTANGLE */
+.btn::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:72%;
+    height:3px;
+
+    border-radius:20px;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        #00ffe1,
+        transparent
+    );
+
+    box-shadow:
+    0 0 12px #00ffe1,
+    0 0 22px rgba(0,255,225,.65);
+}
+
+/* MOVING LIGHT */
+.btn::after{
+    content:"";
+
+    position:absolute;
+
+    top:-120%;
+    left:-40%;
+
+    width:80%;
+    height:320%;
+
+    transform:rotate(18deg);
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(0,255,225,.08),
+        transparent
+    );
+
+    animation:moveGlow 4.5s linear infinite;
+}
+
+@keyframes moveGlow{
+    from{
+        left:-70%;
+    }
+    to{
+        left:130%;
+    }
+}
+
+<!-- GANTI BAGIAN BUTTON YANG LAMA DENGAN INI -->
+
+<button class="btn">
+    <span>LOGIN TO NOSTRA</span>
+</button>
+
+<button class="btn2">
+    <span>CONTACT SUPPORT</span>
+</button>
+
+<style>
+
+/* =========================
+   LOGIN BUTTON KECIL PANJANG
+========================= */
+
+.btn{
+    width:100%;
+    height:58px;
+
+    margin-top:26px;
+
+    border:none;
+
+    border-radius:14px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(0,10,18,.98),
+        rgba(0,16,28,.98)
+    );
+
+    border:1.8px solid rgba(0,255,225,.28);
+
+    box-shadow:
+    0 0 14px rgba(0,255,225,.10),
+    inset 0 0 18px rgba(0,255,225,.03);
+
+    transition:.35s ease;
+}
+
+/* PERSEGI PANJANG ATAS */
+.btn::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:78%;
+    height:2px;
+
+    border-radius:20px;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        #00ffe1,
+        transparent
+    );
+
+    box-shadow:
+    0 0 10px rgba(0,255,225,.8);
+}
+
+/* GLOW GERAK */
+.btn::after{
+    content:"";
+
+    position:absolute;
+
+    top:-140%;
+    left:-40%;
+
+    width:65%;
+    height:340%;
+
+    transform:rotate(18deg);
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(0,255,225,.07),
+        transparent
+    );
+
+    animation:moveGlow 4s linear infinite;
+}
+
+@keyframes moveGlow{
+    from{
+        left:-70%;
+    }
+    to{
+        left:130%;
+    }
+}
+
+/* TEXT */
+.btn span{
+    position:relative;
+
+    z-index:2;
+
+    height:100%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-family:'Ethnocentric',sans-serif;
+
+    font-size:12px;
+
+    letter-spacing:3px;
+
+    color:#00ffe1;
+
+    text-shadow:
+    0 0 8px rgba(0,255,225,.35);
+}
+
+/* HOVER */
+.btn:hover{
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 0 18px rgba(0,255,225,.22);
+}
+
+/* =========================
+   SUPPORT BUTTON
+========================= */
+
+.btn2{
+    width:100%;
+    height:50px;
+
+    margin-top:16px;
+
+    border:none;
+
+    border-radius:14px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    background:
+    linear-gradient(
+        145deg,
+        #121827,
+        #0b1120
+    );
+
+    box-shadow:
+    inset 0 0 14px rgba(255,255,255,.02);
+}
+
+/* GARIS ATAS */
+.btn2::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:65%;
+    height:2px;
+
+    border-radius:20px;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+}
+
+/* TEXT */
+.btn2 span{
+    height:100%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-family:'Michroma',sans-serif;
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+    color:#97a1b4;
+}
+
+/* TITLE */
+.social-title{
+    text-align:center;
+
+    font-family:'Michroma',sans-serif;
+
+    color:#adb7c8;
+
+    font-size:20px;
+
+    letter-spacing:7px;
+}
+
+/* SOCIAL FLEX */
+.socials{
+    margin-top:38px;
+
+    display:flex;
+    justify-content:space-around;
+}
+
+/* SOCIAL ITEM */
+.social{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+/* ICON */
+.circle{
+    width:82px;
+    height:82px;
+
+    border-radius:50%;
+
+    background:#07101a;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:34px;
+
+    border:2px solid rgba(255,255,255,.04);
+
+    box-shadow:
+    0 0 30px rgba(0,140,255,.2),
+    inset 0 0 18px rgba(255,255,255,.02);
+}
+
+/* TEXT */
+.social span{
+    margin-top:14px;
+
+    color:#c0cad8;
+
+    font-size:14px;
+}
+
+/* FOOTER */
+.footer{
+    margin-top:42px;
+
+    text-align:center;
+
+    color:#5f697f;
+
+    font-size:11px;
+
+    letter-spacing:3px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- TOP -->
+    <div class="top-card">
+
+        <div class="center">
+
+            <div class="logo"></div>
+
+            <div class="big-title">
+                M.NOSTRA
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- TITLE -->
+    <div class="main-title">
+        NOSTRA
+    </div>
+
+    <div class="sub">
+             
+          GACORR • STABIL
+    </div>
+
+    <!-- CARD -->
+    <div class="card">
+
+        <div class="icon-box">
+
+            <svg viewBox="0 0 24 24">
+                <path d="M12 3L5 6v5c0 5 3.5 8 7 10 3.5-2 7-5 7-10V6l-7-3z"/>
+            </svg>
+
+        </div>
+
+        <h2>M.NOSTRA</h2>
+        
+       <p> Aplikasi dengan desain elegan dan fitur bug gacor
+               Pemgembang langsdung oleh M.Nostra
+        </p>
+    </div>
+
+    <!-- BUTTON -->
+    <button class="btn">
+        <span>LOGIN TO NOSTRA</span>
+    </button>
+
+    <button class="btn2">
+        <span>CONTACT SUPPORT</span>
+    </button>
+
+    <!-- SOCIAL -->
+    <div class="social-card">
+
+        <div class="social-title">
+            HUBUNGI KAMI
+        </div>
+
+        <div class="socials">
+
+            <div class="social">
+                <div class="circle">✈</div>
+                <span>Telegram</span>
+            </div>
+
+            <div class="social">
+                <div class="circle">✈</div>
+                <span>Channel</span>
+            </div>
+
+            <div class="social">
+                <div class="circle">♪</div>
+                <span>TikTok</span>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            © 2026 M.NOSTRA — ALL IN FOR YOU
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
